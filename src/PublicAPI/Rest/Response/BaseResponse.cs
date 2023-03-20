@@ -5,9 +5,10 @@ namespace PublicAPI.Rest.Response;
 /// </summary>
 public abstract class BaseResponse : BaseMessage
 {
-    public BaseResponse(Guid correlationId) : base()
+    public BaseResponse(Guid correlationId)
+        : base()
     {
-        this.correlationId = correlationId;
+        this.CorrelationId = correlationId;
     }
 
     public BaseResponse()

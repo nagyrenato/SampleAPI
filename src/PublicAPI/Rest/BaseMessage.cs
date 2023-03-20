@@ -5,10 +5,5 @@ namespace PublicAPI.Rest;
 /// </summary>
 public abstract class BaseMessage
 {
-    /// <summary>
-    /// Unique Identifier used by logging
-    /// </summary>
-    protected Guid correlationId = Guid.NewGuid();
-    
-    public Guid CorrelationId() => this.correlationId;
+    public Guid CorrelationId { get; set; }
 }
