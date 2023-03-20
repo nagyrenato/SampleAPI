@@ -1,4 +1,4 @@
-namespace TodoApi.Contexts;
+﻿namespace TodoApi.Contexts;
 
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;

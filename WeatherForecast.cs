@@ -1,4 +1,4 @@
-namespace SampleAPI;
+﻿namespace SampleAPI;
 
 public class WeatherForecast
 {

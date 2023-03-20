@@ -1,4 +1,4 @@
-public class AddTodoItemResponse
+﻿public class AddTodoItemResponse
 {
     public long Id { get; set; }
 
