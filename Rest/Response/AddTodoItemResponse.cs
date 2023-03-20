@@ -1,4 +1,6 @@
-﻿public class AddTodoItemResponse
+﻿namespace SampleAPI.Rest.Response;
+
+public class AddTodoItemResponse
 {
     public long Id { get; set; }
 

@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using TodoApi.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
