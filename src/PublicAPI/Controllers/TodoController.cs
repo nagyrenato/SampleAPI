@@ -1,10 +1,10 @@
-﻿namespace SampleAPI.Controllers;
+﻿namespace PublicAPI.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using SampleAPI.Rest.Request;
-using TodoApi.Contexts;
-using TodoApi.Models;
+using PublicAPI.Rest.Request;
+using PublicAPI.Contexts;
+using PublicAPI.Models;
 
 [ApiController]
 [Route("[controller]")]

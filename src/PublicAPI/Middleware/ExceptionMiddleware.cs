@@ -1,7 +1,7 @@
-﻿namespace SampleAPI.Middleware;
+﻿namespace PublicAPI.Middleware;
 
 using System.Net;
-using SampleAPI.Rest.Response;
+using PublicAPI.Rest.Response;
 
 public class ExceptionMiddleware
 {

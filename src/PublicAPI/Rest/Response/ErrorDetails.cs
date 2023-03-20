@@ -1,4 +1,4 @@
-﻿namespace SampleAPI.Rest.Response;
+﻿namespace PublicAPI.Rest.Response;
 
 using System.Text.Json;
 

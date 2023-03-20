@@ -1,6 +1,6 @@
-﻿namespace SampleAPI.Rest.Request;
+﻿namespace PublicAPI.Rest.Request;
 
-public class AddTodoItemRequest
+public class AddTodoItemRequest : BaseRequest
 {
     public long Id { get; set; }
 

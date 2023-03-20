@@ -1,7 +1,7 @@
-﻿namespace TodoApi.Contexts;
+﻿namespace PublicAPI.Contexts;
 
 using Microsoft.EntityFrameworkCore;
-using TodoApi.Models;
+using PublicAPI.Models;
 
 public class TodoContext : DbContext
 {
