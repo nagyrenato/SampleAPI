@@ -15,6 +15,7 @@ public class TodoItem
 
     public bool IsComplete { get; set; }
 
+    /// <inheritdoc/>
     public override bool Equals(object? obj)
     {
         return obj is TodoItem item &&
@@ -23,6 +24,7 @@ public class TodoItem
                this.IsComplete == item.IsComplete;
     }
 
+    /// <inheritdoc/>
     public override int GetHashCode()
     {
         return HashCode.Combine(this.Id, this.Name, this.IsComplete);
