@@ -1,18 +1,18 @@
-﻿namespace PublicAPI.Service.Implementation;
+﻿namespace PublicAPI.Repository.Implementation;
 
 using Microsoft.EntityFrameworkCore;
 using PublicAPI.Context;
 using PublicAPI.Model;
 using PublicAPI.Rest.Request;
-using PublicAPI.Service.Interface;
+using PublicAPI.Repository.Interface;
 
-public class DefaultTodoService : ITodoService
+public class TodoRepository : ITodoRepository
 {
-    private readonly ILogger<ITodoService> logger;
+    private readonly ILogger<ITodoRepository> logger;
 
     private readonly TodoContext todoContext;
 
-    public DefaultTodoService(ILogger<DefaultTodoService> logger, TodoContext todoContext)
+    public TodoRepository(ILogger<TodoRepository> logger, TodoContext todoContext)
     {
         this.logger = logger;
         this.todoContext = todoContext;
