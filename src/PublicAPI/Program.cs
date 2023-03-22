@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PublicAPI.Contexts;
+using PublicAPI.Context;
 using PublicAPI.Middleware;
+using PublicAPI.Service.Implementation;
+using PublicAPI.Service.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
+
+builder.Services.AddScoped<ITodoService, DefaultTodoService>();
 
 var app = builder.Build();
 

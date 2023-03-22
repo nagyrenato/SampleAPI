@@ -1,34 +1,30 @@
-﻿namespace PublicAPI.Controllers;
+﻿namespace PublicAPI.Service.Implementation;
 
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PublicAPI.Context;
+using PublicAPI.Model;
 using PublicAPI.Rest.Request;
-using PublicAPI.Contexts;
-using PublicAPI.Models;
+using PublicAPI.Service.Interface;
 
-[ApiController]
-[Route("[controller]")]
-public class TodoController : ControllerBase
+public class DefaultTodoService : ITodoService
 {
-    private readonly ILogger<TodoController> logger;
+    private readonly ILogger<ITodoService> logger;
 
     private readonly TodoContext todoContext;
 
-    public TodoController(ILogger<TodoController> logger, TodoContext todoContext)
+    public DefaultTodoService(ILogger<DefaultTodoService> logger, TodoContext todoContext)
     {
         this.logger = logger;
         this.todoContext = todoContext;
     }
 
-    [HttpGet(Name = "GetTodos")]
     public async Task<IEnumerable<TodoItem>> GetTodosAsync()
     {
         this.logger.LogInformation("GetTodos is being called");
         return await this.todoContext.TodoItems.ToListAsync();
     }
 
-    [HttpPost(Name = "PostTodo")]
-    public async Task PostTodoAsync(AddTodoItemRequest request)
+    public async Task AddTodoAsync(AddTodoItemRequest request)
     {
         this.logger.LogInformation("PostTodoAsync is being called");
         TodoItem item = new TodoItem(request.Id, request.Name, request.IsComplete);
@@ -36,7 +32,6 @@ public class TodoController : ControllerBase
         await this.todoContext.SaveChangesAsync();
     }
 
-    [HttpDelete(Name = "DeleteTodo")]
     public async Task DeleteTodoAsync(long id)
     {
         this.logger.LogInformation("DeleteTodo is being called");

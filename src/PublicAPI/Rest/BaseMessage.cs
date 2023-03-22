@@ -1,7 +1,7 @@
-namespace PublicAPI.Rest;
+﻿namespace PublicAPI.Rest;
 
 /// <summary>
-/// Base class used by API requests
+/// Base class used by API requests.
 /// </summary>
 public abstract class BaseMessage
 {

@@ -1,7 +1,7 @@
-namespace PublicAPI.Rest.Response;
+﻿namespace PublicAPI.Rest.Response;
 
 /// <summary>
-/// Base class used by API responses
+/// Base class used by API responses.
 /// </summary>
 public abstract class BaseResponse : BaseMessage
 {

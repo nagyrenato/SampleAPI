@@ -1,8 +1,8 @@
-﻿namespace PublicAPI.Models;
+﻿namespace PublicAPI.Model;
 
 using Microsoft.AspNetCore.Mvc;
 
-[ApiExplorerSettings(IgnoreApi=true)]
+[ApiExplorerSettings(IgnoreApi = true)]
 public class TodoItem
 {
     public TodoItem(long id, string? name, bool isComplete)
