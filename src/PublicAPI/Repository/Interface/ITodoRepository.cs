@@ -19,13 +19,13 @@ public interface ITodoRepository
     /// TODO: It might be better to not wait rest request here.
     /// </summary>
     /// <param name="request">A <see cref="AddTodoItemRequest"/> that contains all the necessary parameters.</param>
-    /// <returns><see cref="Task"/></returns>
+    /// <returns><see cref="Task"/>.</returns>
     public Task AddTodoAsync(AddTodoItemRequest request);
 
     /// <summary>
     /// Deletes a <see cref="TodoItem"/> based on the given id.
     /// </summary>
     /// <param name="id">The id of the <see cref="TodoItem"/> element that must be deleted.</param>
-    /// <returns><see cref="Task"/></returns>
+    /// <returns><see cref="Task"/>.</returns>
     public Task DeleteTodoAsync(long id);
 }
