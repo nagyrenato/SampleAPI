@@ -53,7 +53,7 @@ public class TodoController : ControllerBase
     /// <summary>
     /// Endpoint to post new todo elements.
     /// </summary>
-    /// <param name="request">Rest request to add new todo item.</param>
+    /// <param name="id">The id of the element that must be deleted.</param>
     /// <returns>Http 200 if successfull.</returns>
     [HttpDelete(Name = "DeleteTodo")]
     public async Task DeleteTodoAsync(long id)
