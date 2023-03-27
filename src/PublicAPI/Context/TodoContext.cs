@@ -18,7 +18,7 @@ public class TodoContext : DbContext
     }
 
     /// <summary>
-    /// Dataset for <see cref="TodoItem"/> items.
+    /// Gets or sets the dataset for <see cref="TodoItem"/> items.
     /// </summary>
     public DbSet<TodoItem> TodoItems { get; set; } = null!;
 }
