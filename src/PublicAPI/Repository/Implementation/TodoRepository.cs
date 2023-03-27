@@ -6,35 +6,37 @@ using PublicAPI.Model;
 using PublicAPI.Rest.Request;
 using PublicAPI.Repository.Interface;
 
+/// <inheritdoc/>
 public class TodoRepository : ITodoRepository
 {
-    private readonly ILogger<ITodoRepository> logger;
-
     private readonly TodoContext todoContext;
 
-    public TodoRepository(ILogger<TodoRepository> logger, TodoContext todoContext)
+    /// <summary>
+    /// Initializes a new instance of the <see cref="TodoRepository"/> class.
+    /// </summary>
+    /// <param name="todoContext"><see cref="DbContext"/> for <see cref="TodoItem"/> elements.</param>
+    public TodoRepository(TodoContext todoContext)
     {
-        this.logger = logger;
         this.todoContext = todoContext;
     }
 
+    /// <inheritdoc/>
     public async Task<IEnumerable<TodoItem>> GetTodosAsync()
     {
-        this.logger.LogInformation("GetTodos is being called");
         return await this.todoContext.TodoItems.ToListAsync();
     }
 
+    /// <inheritdoc/>
     public async Task AddTodoAsync(AddTodoItemRequest request)
     {
-        this.logger.LogInformation("PostTodoAsync is being called");
         TodoItem item = new TodoItem(request.Id, request.Name, request.IsComplete);
         await this.todoContext.AddAsync<TodoItem>(item);
         await this.todoContext.SaveChangesAsync();
     }
 
+    /// <inheritdoc/>
     public async Task DeleteTodoAsync(long id)
     {
-        this.logger.LogInformation("DeleteTodo is being called");
         TodoItem? item = await this.todoContext.FindAsync<TodoItem>(id);
         if (item != null)
         {

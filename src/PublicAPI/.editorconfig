@@ -216,7 +216,7 @@ dotnet_diagnostic.SA1515.severity = warning
 dotnet_diagnostic.SA1516.severity = warning
 
 # Elements should be documented
-dotnet_diagnostic.SA1600.severity = warning
+dotnet_diagnostic.SA1600.severity = error
 
 # Partial elements should be documented
 dotnet_diagnostic.SA1601.severity = warning
@@ -232,3 +232,4 @@ dotnet_diagnostic.SA1633.severity = none
 
 # File name should match first type name
 dotnet_diagnostic.SA1649.severity = warning
+
