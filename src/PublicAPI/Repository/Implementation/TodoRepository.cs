@@ -44,4 +44,10 @@ public class TodoRepository : ITodoRepository
             await this.todoContext.SaveChangesAsync();
         }
     }
+
+    /// <inheritdoc/>
+    public async Task GenerateErrorAsync()
+    {
+        throw new NotImplementedException();
+    }
 }

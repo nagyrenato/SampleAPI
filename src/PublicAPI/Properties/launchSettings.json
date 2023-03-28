@@ -1,11 +1,17 @@
 {
   "profiles": {
-    "PublicAPI": {
+    "PublicAPI (dev)": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
+      "applicationUrl": "https://localhost:55397;http://localhost:55398",
+      "launchUrl": "swagger/index.html"
+    },
+    "PublicAPI (prod)": {
+      "commandName": "Project",
+      "launchBrowser": true,
       "applicationUrl": "https://localhost:55397;http://localhost:55398"
     }
   }

@@ -13,6 +13,7 @@ public class ExceptionMiddleware
     /// <summary>
     /// Initializes a new instance of the <see cref="ExceptionMiddleware"/> class.
     /// </summary>
+    /// <param name="next">Following delegate.</param>
     public ExceptionMiddleware(RequestDelegate next)
     {
         this.next = next;

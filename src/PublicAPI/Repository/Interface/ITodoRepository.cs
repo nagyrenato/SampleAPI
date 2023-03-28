@@ -28,4 +28,10 @@ public interface ITodoRepository
     /// <param name="id">The id of the <see cref="TodoItem"/> element that must be deleted.</param>
     /// <returns><see cref="Task"/>.</returns>
     public Task DeleteTodoAsync(long id);
+
+    /// <summary>
+    /// Generates an error that must be handled by the caller.
+    /// </summary>
+    /// <returns><see cref="Task"/>.</returns>
+    public Task GenerateErrorAsync();
 }

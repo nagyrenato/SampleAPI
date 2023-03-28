@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using PublicAPI.Context;
+﻿using PublicAPI;
 using PublicAPI.Middleware;
 using PublicAPI.Repository.Implementation;
 using PublicAPI.Repository.Interface;
@@ -19,7 +18,8 @@ internal class Program
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
-        builder.Services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
+
+        DatabaseConfigurator.ConfigureServices(builder.Configuration, builder.Services);
 
         builder.Services.AddScoped<ITodoRepository, TodoRepository>();
 
